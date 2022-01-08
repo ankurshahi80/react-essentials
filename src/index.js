@@ -17,7 +17,7 @@ ReactDOM.render(
   // </ul>,
 
   // render a react component
-  <App />,
+  <App authorized={true}/>,
   // 2nd argument: where we want to put it
   document.getElementById('root')
 );
