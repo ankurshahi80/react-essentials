@@ -1,22 +1,22 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import './App.css';
 
 function App() {
-  const [emotion, setEmotion] = useState("happy");
+  const [checked, toggle] = useReducer(
+    (checked)=>!checked,
+    false
+  );
+
   return (
     <>
-      <h1>Current emotion is {emotion}.</h1>
-      <button onClick={()=> setEmotion("happy")}>
-        Happy
-      </button>
-      <button onClick={()=>setEmotion("frustrated")}>
-        Frustrate
-      </button>
-      <button onClick={()=> setEmotion("enthusiastic")}>
-        Enthuse
-      </button>
+      <input
+       type="checkbox" 
+       value={checked} 
+       onChange={toggle}
+      />
+      <p>{checked? "checked" : "not checked"}</p>
     </>
-  )
-};
+  );
+}
 
 export default App;
