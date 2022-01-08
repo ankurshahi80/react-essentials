@@ -5,7 +5,7 @@ import App from "./App";
 
 ReactDOM.render(
   // 1st argument: what we want to create 
-  <App />,
+  <App login="ankurshahi80"/>,
   // 2nd argument: where we want to put it
   document.getElementById('root')
 );
